@@ -58,6 +58,3 @@ Por cada estimulo se imprime:
 ## Nota de proyecto open source
 
 El codigo es abierto. Si quieres distribucion formal, agrega una licencia explicita (`MIT`, `Apache-2.0`, etc.) para dejar claros los permisos de uso.
-
-
-## Este es un proyecto de investigación

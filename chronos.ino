@@ -30,6 +30,8 @@ void setup(){
   pinMode(LEDR, OUTPUT);
   pinMode(LEDV, OUTPUT);
   pinMode(LEDA, OUTPUT); 
+  analogWrite(LEDA, off_brightness);
+
 }
 
 void loop(){
@@ -166,7 +168,6 @@ void loop(){
   if (LEDRSTATE == 1){
     analogWrite(LEDR, off_brightness);
     analogWrite(LEDV, brightness);   //Enciende el led despues de una pausa de 5s
-    analogWrite(LEDA, brightness);
     LEDCOLOR = "LEDV ";
   }else{
     analogWrite(LEDR, brightness);
