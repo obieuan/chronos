@@ -1,0 +1,31 @@
+# Build artifacts
+build/
+out/
+dist/
+cmake-build-*/
+
+# Arduino compiled outputs
+*.elf
+*.hex
+*.bin
+*.eep
+*.map
+*.lst
+*.o
+*.a
+*.d
+*.srec
+*.ino.cpp
+*.ino.cpp.*
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# Arduino IDE local settings
+.arduinoIDE/
+arduino-cli.yaml
+
+# OS files
+.DS_Store
+Thumbs.db
