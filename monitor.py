@@ -7,7 +7,7 @@ from serial.tools import list_ports
 from colorama import init, Fore, Style
 init(convert=True)  # fuerza conversión ANSI->Win32 en consolas viejas
 
-APP_NAME = "CRONOS"
+APP_NAME = "CHRONOS"
 DEFAULT_BAUD = 9600
 
 GREEN = Fore.GREEN
@@ -16,16 +16,16 @@ CYAN = Fore.CYAN
 RESET = Style.RESET_ALL
 
 BANNER = f"""{BRIGHT_GREEN}
-  ██████╗ ██████╗  ██████╗ ███╗   ██╗ ██████╗ ███████╗
- ██╔════╝ ██╔══██╗██╔═══██╗████╗  ██║██╔═══██╗██╔════╝
- ██║      ██████╔╝██║   ██║██╔██╗ ██║██║   ██║███████╗
- ██║      ██╔══██╗██║   ██║██║╚██╗██║██║   ██║╚════██║
- ╚██████╗ ██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝███████║
-  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+  ██████╗ ██╗  ██╗██████╗  ██████╗ ███╗   ██╗ ██████╗ ███████╗
+ ██╔════╝ ██║  ██║██╔══██╗██╔═══██╗████╗  ██║██╔═══██╗██╔════╝
+ ██║      ███████║██████╔╝██║   ██║██╔██╗ ██║██║   ██║███████╗
+ ██║      ██╔══██║██╔══██╗██║   ██║██║╚██╗██║██║   ██║╚════██║
+ ╚██████╗ ██║  ██║██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝███████║
+  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
 
-+--------------------------------+
-|fomenta la psicología cientifica|
-+--------------------------------+
++----------------------------------+
+| fomenta la psicología científica |
++----------------------------------+
 {RESET}
 """
 
@@ -74,7 +74,7 @@ def reader_loop(ser, stop_event):
             line = ser.readline()
             if line:
                 text = line.decode("utf-8", errors="replace").rstrip()
-                print(text)  # Arduino en blanco
+                print(text)
         except:
             break
 
@@ -105,11 +105,10 @@ def main():
                 while True:
                     user_input = input()
 
-                    # Tus comandos en cian
                     print(CYAN + f"> {user_input}" + RESET)
 
                     if user_input.strip().lower() == "reset":
-                        print(GREEN + "\nReiniciando CRONOS...\n" + RESET)
+                        print(GREEN + "\nReiniciando CHRONOS...\n" + RESET)
                         pulse_dtr_reset(ser)
                         continue
 
