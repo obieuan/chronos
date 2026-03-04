@@ -29,3 +29,7 @@ arduino-cli.yaml
 # OS files
 .DS_Store
 Thumbs.db
+
+# PyInstaller
+*.spec
+__pycache__/
